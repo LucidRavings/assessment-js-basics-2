@@ -98,7 +98,53 @@ console.log(onlyCategory)
 */
 
 //CODE HERE
+const pizza1 = {
+    name: "peperoni",
+    price: 19.99,
+    category: "entree",
+    popularity: "very popular",
+    rating: 5,
+    tags: [`meat`, `cheese`, `family`]
+}
 
+const pizza2 = {
+    name: "cheese",
+    price: 14.99,
+    category: "entree",
+    popularity: "popular",
+    rating: 4,
+    tags: ['cheese', `deal`, `family`]
+}
+
+const pizza3 = {
+    name: "vegi-lovers",
+    price: 19.99,
+    category: "entree",
+    popularity: "average",
+    rating: 3,
+    tags: [`vegi`, `cheese`,]
+}
+
+const pizza4 = {
+    name: "meat-lovers",
+    price: 24.99,
+    category: "entree",
+    popularity: "very popular",
+    rating: 5,
+    tags: [`meat`, `cheese`,]
+}
+
+const pizza5 = {
+    name: "salad",
+    price: 8.99,
+    category: "appetizer",
+    popularity: "unpopular",
+    rating: 2,
+    tags: ['deal', `vegi`]
+}
+
+const foodArr = [pizza1, pizza2, pizza3, pizza4, pizza5]
+console.log(foodArr)
 
 
 //////////////////PROBLEM 4////////////////////
@@ -115,7 +161,7 @@ console.log(onlyCategory)
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+//const filteredFood = foodArr
 
 
 
