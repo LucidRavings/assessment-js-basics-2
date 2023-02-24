@@ -22,7 +22,8 @@
 */
 
 //CODE HERE
-
+const greetUser = ((username) => console.log(`Welcome back, ${username}`))
+greetUser(`Andrew`)
 
 
 
@@ -50,9 +51,10 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+const canWeDeliver = ((zipCode) => deliveryAreaZipCodes.includes(zipCode) ? console.log(`You're in our delivery zone!`) : console.log(`Sorry, we can't deliver to that address`))
 
-
-
+canWeDeliver(85203)
+canWeDeliver(5)
 /* 
     Problem 2 Continued
 
@@ -71,8 +73,17 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+const canWeDeliverTwo = ((zipCode) => {
+    for (i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if (zipCode === deliveryAreaZipCodes[i]){
+            return console.log(`You're in our delivery zone!`)
+        } 
+    }
+    return console.log(`Sorry, we can't deliver to that address`)
+})
 
-
+canWeDeliverTwo(85203)
+canWeDeliverTwo(5)
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
