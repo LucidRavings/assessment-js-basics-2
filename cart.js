@@ -98,7 +98,7 @@ paymentCardNumber: A "number" data type to store the card number of the payment 
 */
 
 //CODE HERE
-class customer {
+class Customer {
     constructor(name, phone, email, paymentCardNumber) {
     this.name = name,
     this.phone = Number(phone),
@@ -107,5 +107,5 @@ class customer {
     }
 }
 
-let bob = new customer("Bob", "123444555", "example@email.com", 1111222233334444)
+let bob = new Customer("Bob", "123444555", "example@email.com", 1111222233334444)
 console.log(bob)
