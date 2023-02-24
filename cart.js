@@ -82,6 +82,13 @@ console.log(calcFinalPrice(100,10,0.05))
 
 /*
     TEXT ANSWER HERE
+Name: A "string" data type To identify the customer for internal and external purposes (like contacting payment processors to complete transactions)
+
+Phone: A "number" data type to store the contact info for the customer, so that staff can communicate to the customer as appropriate to achieve business outcomes.
+
+Email: A "string" data type to store the customers' email address for sending periodic newsletters and promotions as part of an ongoing effort for encouraging repeat customers and running promotions of new products and events.
+
+paymentCardNumber: A "number" data type to store the card number of the payment method the customer uses to initiate transactions, so that payment status can be tracked, and eventually collected
 
 */
 
@@ -91,3 +98,14 @@ console.log(calcFinalPrice(100,10,0.05))
 */
 
 //CODE HERE
+class customer {
+    constructor(name, phone, email, paymentCardNumber) {
+    this.name = name,
+    this.phone = Number(phone),
+    this.email = email,
+    this.paymentCardNumber = Number(paymentCardNumber)
+    }
+}
+
+let bob = new customer("Bob", "123444555", "example@email.com", 1111222233334444)
+console.log(bob)
