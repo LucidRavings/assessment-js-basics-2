@@ -102,7 +102,7 @@ const pizza1 = {
     name: "peperoni",
     price: 19.99,
     category: "entree",
-    popularity: "very popular",
+    popularity: 5,
     rating: 5,
     tags: [`meat`, `cheese`, `family`]
 }
@@ -111,7 +111,7 @@ const pizza2 = {
     name: "cheese",
     price: 14.99,
     category: "entree",
-    popularity: "popular",
+    popularity: 4,
     rating: 4,
     tags: ['cheese', `deal`, `family`]
 }
@@ -120,7 +120,7 @@ const pizza3 = {
     name: "vegi-lovers",
     price: 19.99,
     category: "entree",
-    popularity: "average",
+    popularity: 3,
     rating: 3,
     tags: [`vegi`, `cheese`,]
 }
@@ -129,7 +129,7 @@ const pizza4 = {
     name: "meat-lovers",
     price: 24.99,
     category: "entree",
-    popularity: "very popular",
+    popularity: 5,
     rating: 5,
     tags: [`meat`, `cheese`,]
 }
@@ -138,7 +138,7 @@ const pizza5 = {
     name: "salad",
     price: 8.99,
     category: "appetizer",
-    popularity: "unpopular",
+    popularity: 2,
     rating: 2,
     tags: ['deal', `vegi`]
 }
@@ -161,9 +161,9 @@ console.log(foodArr)
 
 //CODE HERE
 
-//const filteredFood = foodArr
+const filteredFood = foodArr.filter((element) => element.tags.includes('vegi'))
 
-
+console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -205,7 +205,15 @@ console.log(foodArr)
 */
 
 //CODE HERE
-
+const filterByProperty = ((property, number, type) => {
+    let filteredArr = []
+    if (type === "above"){
+        filteredArr = foodArr.filter((e) => e[property] > number)
+    } else if (type === "below"){
+        filteredArr = foodArr.filter((e) => e[property] < number)
+    }
+    return filteredArr
+})
 
 /*
     Invoke the `filterByProperty` function passing
@@ -215,3 +223,4 @@ console.log(foodArr)
 */
 
 //CODE HERE
+console.log(filterByProperty('rating', 3, 'above'))
